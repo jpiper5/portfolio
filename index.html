@@ -10,7 +10,6 @@
   <body>
     <header>
       <img src="images/JP.svg" alt="JP logo">
-      <h1>Jessica Piper</h1>
       <nav>
         <ul>
           <li>Home</li>
@@ -24,18 +23,18 @@
         <img src="images/profilePic.jpg" alt="profile pic" width="200px">
       </section>
       <section id="bio">
-        <h2>Front-End Developer</h2>
+        <h1>Front-End Developer</h1>
         <p>I'm Jessica Piper, a front-end developer with a passion for user experience. I want to create websites that are aesthetically pleasing <em>and</em> accessible to all users. If you are looking to bring more eyes to your website and improve its accessibility, you've come to the right place!</p>
         <div id="buttons">
-          <button>Contact</button>
-          <button>Resume</button>
+          <a href="#contactForm">Contact</a>
+          <a href="#resume">Resume</a>
         </div>
       </section>
       <section id="education">
-        <h3>Education</h3>
-        <p>Arizona State University <br> B.S. in Human Systems Engineering (User Experience) <br> May 2025 (GPA: 3.98)</p>
-        <h3>Skills</h3>
-        <ul>
+        <h2>Education</h2>
+        <p><b>Arizona State University</b><br> B.S. in Human Systems Engineering (User Experience) <br> May 2025 (GPA: 3.98)</p>
+        <h2 class="hidden">Skills</h2>
+        <ul class="hidden">
           <li>HTML</li>
           <li>CSS</li>
           <li>JavaScript</li>
@@ -47,39 +46,40 @@
         </ul>
       </section>
       <section id="projects">
-        <h3>Projects</h3>
+        <h2>Projects</h2>
         <section class="preview">
           <img src="https://picsum.photos/200/300" alt="project thumbnail">
-          <h4>Project 1</h4>
+          <h3>Project 1</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sed dicta quae facere laudantium mollitia nihil magnam quod asperiores necessitatibus repudiandae voluptas saepe voluptatum molestiae cum voluptatibus quos, assumenda consequatur!</p>
         </section>
         <section class="preview">
           <img src="https://picsum.photos/200/300" alt="project thumbnail">
-          <h4>Project 2</h4>
+          <h3>Project 2</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi voluptatibus facilis earum molestias blanditiis illum magnam! Ad atque ab libero dolor, delectus laborum quod. Repudiandae aliquam quidem laudantium et odio!</p>
         </section>
         <section class="preview">
           <img src="https://picsum.photos/200/300" alt="project thumbnail">
-          <h4>Project 3</h4>
+          <h3>Project 3</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae perferendis excepturi impedit dolores. Ducimus, modi enim numquam itaque voluptatibus cum veritatis, quam unde quibusdam deleniti error omnis in deserunt sunt.</p>
         </section>
         <section class="preview">
           <img src="https://picsum.photos/200/300" alt="project thumbnail">
-          <h4>Project 4</h4>
+          <h3>Project 4</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores sed dicta quae facere laudantium mollitia nihil magnam quod asperiores necessitatibus repudiandae voluptas saepe voluptatum molestiae cum voluptatibus quos, assumenda consequatur!</p>
         </section>
         <section class="preview">
           <img src="https://picsum.photos/200/300" alt="project thumbnail">
-          <h4>Project 5</h4>
+          <h3>Project 5</h3>
           <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi voluptatibus facilis earum molestias blanditiis illum magnam! Ad atque ab libero dolor, delectus laborum quod. Repudiandae aliquam quidem laudantium et odio!</p>
         </section>
         <section class="preview">
           <img src="https://picsum.photos/200/300" alt="project thumbnail">
-          <h4>Project 6</h4>
+          <h3>Project 6</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae perferendis excepturi impedit dolores. Ducimus, modi enim numquam itaque voluptatibus cum veritatis, quam unde quibusdam deleniti error omnis in deserunt sunt.</p>
         </section>
       </section>
       <section id="contactForm">
+        <h2>Contact Me</h2>
         <form action="">
           <label for="fullName">Full Name:</label>
           <input type="text" name="fullName" id="fullName">
@@ -90,13 +90,16 @@
           <label for="phone">Phone:</label>
           <input type="tel" name="phone" id="phone">
 
-          <h4>Contact Preference:</h4>
-          <label for="prefEmail">
-          <input type="radio" id="prefEmail" name="contactPref" checked>Email</input>
-          </label>
-          <label for="prefPhone">
-          <input type="radio" id="prefPhone" name="contactPref">Phone</input>
-          </label>
+          <fieldset>
+            <legend>Preferred Contact Method<span class="required">*</span></legend> 
+            <input type="radio" name="preferredContact" id="prefEmail" checked>
+            <label for="prefEmail">Email</label>
+
+            <input type="radio" name="preferredContact" id="prefPhone">
+            <label for="prefPhone">Phone</label>
+            <span class="message">Please enter your email above</span>
+            <span class="message">Please enter your phone number above</span>
+          </fieldset>
 
           <label for="comments">Comments:</label>
           <textarea name="comments" id="comments"></textarea>
@@ -107,11 +110,15 @@
     </main>
     <footer>
       <ul>
-        <!-- insert logos -->
-        <li><a href="https://www.linkedin.com/in/jessica-piper-56682a28a/">LinkedIn</a></li>
-        <li><a href="https://github.com/jpiper5">GitHub</a></li>
-        <li><a href="https://asu.joinhandshake.com/profiles/m2xv6h">Handshake</a></li>
-        <li><a href="https://www.behance.net/jessicapiper2">Behance</a></li>
+        <li><a href="https://www.linkedin.com/in/jessica-piper-56682a28a/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#0a66c2" class="mercado-match" width="32" height="32" focusable="false">
+          <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+          </svg></a></li>
+        <li><a href="https://github.com/jpiper5"><svg height="32" viewBox="0 0 24 24" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle">
+          <path d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z"></path>
+          </svg></a></li>
+        <li><img src="images/JP.svg" alt="JP logo"></li>
+        <li><a href="https://asu.joinhandshake.com/profiles/m2xv6h"><svg width="32px" height="32px" viewBox="0 0 165 165" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="165" height="165" rx="35.61" fill="#D3FB52"></rect><path d="M99.5856 33L92.95 70.7437L73.4585 86.6752L82.8902 33H63.9964L46.521 132H65.4147L70.2673 104.611L89.8297 88.5578L82.1101 132H101.014L118.479 33H99.5856Z" fill="#052326"></path></svg></a></li>
+        <li><a href="https://www.behance.net/jessicapiper2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24.247 15.985" width="32px" height="32px"><g transform="translate(-55 -103)"><path d="M7.017,0A8.12,8.12,0,0,1,8.965.2,4.348,4.348,0,0,1,10.47.844a2.97,2.97,0,0,1,.967,1.194,4.51,4.51,0,0,1,.345,1.849,3.548,3.548,0,0,1-.511,1.98,3.76,3.76,0,0,1-1.519,1.3A3.627,3.627,0,0,1,11.8,8.619a4.516,4.516,0,0,1,.677,2.519,4.652,4.652,0,0,1-.428,2.053,4,4,0,0,1-1.174,1.427,5.18,5.18,0,0,1-1.7.815,7.238,7.238,0,0,1-1.948.262H0V0ZM6.6,6.348a2.275,2.275,0,0,0,1.437-.437,1.709,1.709,0,0,0,.566-1.427,1.928,1.928,0,0,0-.18-.9,1.306,1.306,0,0,0-.5-.539,1.875,1.875,0,0,0-.718-.277,4.038,4.038,0,0,0-.843-.073H3.274V6.362H6.6Zm.18,6.682a3.847,3.847,0,0,0,.925-.1,2.22,2.22,0,0,0,.774-.335,1.663,1.663,0,0,0,.539-.626,2.218,2.218,0,0,0,.193-1.019,2.1,2.1,0,0,0-.649-1.732,2.639,2.639,0,0,0-1.713-.51H3.274V13.03Z" transform="translate(55 103)"></path><path d="M101,36.468a2.585,2.585,0,0,0,1.92.684,2.528,2.528,0,0,0,1.547-.48,1.978,1.978,0,0,0,.787-1h2.611a5.142,5.142,0,0,1-1.92,2.926,5.339,5.339,0,0,1-3.122.888,5.9,5.9,0,0,1-2.307-.437,4.927,4.927,0,0,1-1.74-1.223,5.705,5.705,0,0,1-1.091-1.893,7.123,7.123,0,0,1-.387-2.417,6.989,6.989,0,0,1,.4-2.373,5.354,5.354,0,0,1,5.139-3.64,4.921,4.921,0,0,1,2.4.568,5.038,5.038,0,0,1,1.685,1.5,6.262,6.262,0,0,1,.953,2.155,8.491,8.491,0,0,1,.207,2.533h-7.777A3.094,3.094,0,0,0,101,36.468Zm3.412-5.969a2.154,2.154,0,0,0-1.671-.626,2.36,2.36,0,0,0-1.174.262,2.514,2.514,0,0,0-.746.626,2.409,2.409,0,0,0-.4.8,3.316,3.316,0,0,0-.138.742H105.1A3.267,3.267,0,0,0,104.414,30.5Z" transform="translate(-28.86 79.504)"></path><rect width="6.036" height="1.543" transform="translate(70.802 104.048)"></rect></g></svg></a></li>
       </ul>
     </footer>
   </body>
